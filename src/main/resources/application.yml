@@ -2,7 +2,7 @@ canal:
   client:
     instances:
       example:
-        host: 10.1.2.41
+        host: 127.0.0.1
         port: 11111
         userName: canal
         password: canal

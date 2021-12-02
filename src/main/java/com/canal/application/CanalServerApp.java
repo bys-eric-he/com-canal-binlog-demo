@@ -13,12 +13,21 @@ import com.alibaba.otter.canal.protocol.CanalEntry.RowData;
 import java.net.InetSocketAddress;
 import java.util.List;
 
+/**
+ * 启动服务之前,先确认Docker服务 Canal容器 、 MySQL容器是否启动
+ * 04f0aefb6f00   canal/canal-server    "/alidata/bin/main.s…"   2 months ago    Up 7 seconds            9100/tcp, 11110/tcp, 11112/tcp, 0.0.0.0:11111->11111/tcp, :::11111->11111/tcp canal-server
+ * dee7873e0203   mysql:5.7             "docker-entrypoint.s…"   6 months ago    Up 6 hours              0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp       mysql-database-5.7
+ */
 public class CanalServerApp {
     public static void main(String args[]) {
 
-        String host = "10.1.2.41";
+        //Canal 主机服务
+        String host = "127.0.0.1";
+        //Canal 服务端口号
         int port = 11111;
+
         String destination = "example";
+
         String username = "canal";
         String password = "canal";
 
