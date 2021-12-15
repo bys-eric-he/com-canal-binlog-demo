@@ -28,6 +28,7 @@ public class CanalServerApp {
 
         String destination = "example";
 
+        //canal容器用户名、密码
         String username = "canal";
         String password = "canal";
 
